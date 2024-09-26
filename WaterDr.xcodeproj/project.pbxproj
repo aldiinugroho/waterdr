@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C50ACFC1548EF4CFF9241B6 /* Pods_WaterDr_WaterDrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D57A7557DD53470046E9AFC /* Pods_WaterDr_WaterDrUITests.framework */; };
+		890745762CA3E77900419221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890745752CA3E77900419221 /* AppDelegate.swift */; };
+		8907457A2CA3E77900419221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890745792CA3E77900419221 /* ViewController.swift */; };
+		8907457F2CA3E77A00419221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8907457E2CA3E77A00419221 /* Assets.xcassets */; };
+		890745822CA3E77A00419221 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 890745812CA3E77A00419221 /* Base */; };
+		8907458D2CA3E77A00419221 /* WaterDrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907458C2CA3E77A00419221 /* WaterDrTests.swift */; };
+		890745972CA3E77A00419221 /* WaterDrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890745962CA3E77A00419221 /* WaterDrUITests.swift */; };
+		890745992CA3E77A00419221 /* WaterDrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890745982CA3E77A00419221 /* WaterDrUITestsLaunchTests.swift */; };
+		8924A9A42CA40EA000683141 /* ScreenUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924A9A32CA40EA000683141 /* ScreenUtils.swift */; };
+		DFD996F8F12638FF835EB0BC /* Pods_WaterDr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3180131A0712772386EB352 /* Pods_WaterDr.framework */; };
+		FF5FA0FC3B1DA7C250F87384 /* Pods_WaterDrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1ED73A70E7610053F0FED0 /* Pods_WaterDrTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		890745892CA3E77A00419221 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8907456A2CA3E77900419221 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 890745712CA3E77900419221;
+			remoteInfo = WaterDr;
+		};
+		890745932CA3E77A00419221 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8907456A2CA3E77900419221 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 890745712CA3E77900419221;
+			remoteInfo = WaterDr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		012E838D138322047D22F699 /* Pods-WaterDr-WaterDrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDr-WaterDrUITests.release.xcconfig"; path = "Target Support Files/Pods-WaterDr-WaterDrUITests/Pods-WaterDr-WaterDrUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2FCA5870531808E148388D18 /* Pods-WaterDr-WaterDrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDr-WaterDrUITests.debug.xcconfig"; path = "Target Support Files/Pods-WaterDr-WaterDrUITests/Pods-WaterDr-WaterDrUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D57A7557DD53470046E9AFC /* Pods_WaterDr_WaterDrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterDr_WaterDrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F8143670C690CF9CCE8D7F5 /* Pods-WaterDrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDrTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterDrTests/Pods-WaterDrTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6052B65309B2ABE8C93D8158 /* Pods-WaterDr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDr.debug.xcconfig"; path = "Target Support Files/Pods-WaterDr/Pods-WaterDr.debug.xcconfig"; sourceTree = "<group>"; };
+		890745722CA3E77900419221 /* WaterDr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterDr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		890745752CA3E77900419221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		890745792CA3E77900419221 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8907457E2CA3E77A00419221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		890745812CA3E77A00419221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		890745832CA3E77A00419221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		890745882CA3E77A00419221 /* WaterDrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterDrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8907458C2CA3E77A00419221 /* WaterDrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDrTests.swift; sourceTree = "<group>"; };
+		890745922CA3E77A00419221 /* WaterDrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterDrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		890745962CA3E77A00419221 /* WaterDrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDrUITests.swift; sourceTree = "<group>"; };
+		890745982CA3E77A00419221 /* WaterDrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDrUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8924A9A32CA40EA000683141 /* ScreenUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenUtils.swift; sourceTree = "<group>"; };
+		927F79D69CBB9B8CD3B1B304 /* Pods-WaterDr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDr.release.xcconfig"; path = "Target Support Files/Pods-WaterDr/Pods-WaterDr.release.xcconfig"; sourceTree = "<group>"; };
+		D3180131A0712772386EB352 /* Pods_WaterDr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterDr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC1ED73A70E7610053F0FED0 /* Pods_WaterDrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterDrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E662A7877A1A04C075396F88 /* Pods-WaterDrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDrTests.release.xcconfig"; path = "Target Support Files/Pods-WaterDrTests/Pods-WaterDrTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8907456F2CA3E77900419221 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD996F8F12638FF835EB0BC /* Pods_WaterDr.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		890745852CA3E77A00419221 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5FA0FC3B1DA7C250F87384 /* Pods_WaterDrTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8907458F2CA3E77A00419221 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C50ACFC1548EF4CFF9241B6 /* Pods_WaterDr_WaterDrUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A6D612091DD428F609DA108 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6052B65309B2ABE8C93D8158 /* Pods-WaterDr.debug.xcconfig */,
+				927F79D69CBB9B8CD3B1B304 /* Pods-WaterDr.release.xcconfig */,
+				2FCA5870531808E148388D18 /* Pods-WaterDr-WaterDrUITests.debug.xcconfig */,
+				012E838D138322047D22F699 /* Pods-WaterDr-WaterDrUITests.release.xcconfig */,
+				5F8143670C690CF9CCE8D7F5 /* Pods-WaterDrTests.debug.xcconfig */,
+				E662A7877A1A04C075396F88 /* Pods-WaterDrTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1C32D2776792AABFA9FF03F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3180131A0712772386EB352 /* Pods_WaterDr.framework */,
+				4D57A7557DD53470046E9AFC /* Pods_WaterDr_WaterDrUITests.framework */,
+				DC1ED73A70E7610053F0FED0 /* Pods_WaterDrTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		890745692CA3E77900419221 = {
+			isa = PBXGroup;
+			children = (
+				890745742CA3E77900419221 /* WaterDr */,
+				8907458B2CA3E77A00419221 /* WaterDrTests */,
+				890745952CA3E77A00419221 /* WaterDrUITests */,
+				890745732CA3E77900419221 /* Products */,
+				1A6D612091DD428F609DA108 /* Pods */,
+				1C32D2776792AABFA9FF03F0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		890745732CA3E77900419221 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				890745722CA3E77900419221 /* WaterDr.app */,
+				890745882CA3E77A00419221 /* WaterDrTests.xctest */,
+				890745922CA3E77A00419221 /* WaterDrUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		890745742CA3E77900419221 /* WaterDr */ = {
+			isa = PBXGroup;
+			children = (
+				8924A9A22CA40E8F00683141 /* Utils */,
+				890745752CA3E77900419221 /* AppDelegate.swift */,
+				890745792CA3E77900419221 /* ViewController.swift */,
+				8907457E2CA3E77A00419221 /* Assets.xcassets */,
+				890745802CA3E77A00419221 /* LaunchScreen.storyboard */,
+				890745832CA3E77A00419221 /* Info.plist */,
+			);
+			path = WaterDr;
+			sourceTree = "<group>";
+		};
+		8907458B2CA3E77A00419221 /* WaterDrTests */ = {
+			isa = PBXGroup;
+			children = (
+				8907458C2CA3E77A00419221 /* WaterDrTests.swift */,
+			);
+			path = WaterDrTests;
+			sourceTree = "<group>";
+		};
+		890745952CA3E77A00419221 /* WaterDrUITests */ = {
+			isa = PBXGroup;
+			children = (
+				890745962CA3E77A00419221 /* WaterDrUITests.swift */,
+				890745982CA3E77A00419221 /* WaterDrUITestsLaunchTests.swift */,
+			);
+			path = WaterDrUITests;
+			sourceTree = "<group>";
+		};
+		8924A9A22CA40E8F00683141 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8924A9A32CA40EA000683141 /* ScreenUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		890745712CA3E77900419221 /* WaterDr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8907459C2CA3E77A00419221 /* Build configuration list for PBXNativeTarget "WaterDr" */;
+			buildPhases = (
+				4C5F9A31E35355F6973B787E /* [CP] Check Pods Manifest.lock */,
+				8907456E2CA3E77900419221 /* Sources */,
+				8907456F2CA3E77900419221 /* Frameworks */,
+				890745702CA3E77900419221 /* Resources */,
+				EF37F9FBB29CB383A71FD906 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaterDr;
+			productName = WaterDr;
+			productReference = 890745722CA3E77900419221 /* WaterDr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		890745872CA3E77A00419221 /* WaterDrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8907459F2CA3E77A00419221 /* Build configuration list for PBXNativeTarget "WaterDrTests" */;
+			buildPhases = (
+				D3181C0F6D1EEF999A8BEEC3 /* [CP] Check Pods Manifest.lock */,
+				890745842CA3E77A00419221 /* Sources */,
+				890745852CA3E77A00419221 /* Frameworks */,
+				890745862CA3E77A00419221 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8907458A2CA3E77A00419221 /* PBXTargetDependency */,
+			);
+			name = WaterDrTests;
+			productName = WaterDrTests;
+			productReference = 890745882CA3E77A00419221 /* WaterDrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		890745912CA3E77A00419221 /* WaterDrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 890745A22CA3E77A00419221 /* Build configuration list for PBXNativeTarget "WaterDrUITests" */;
+			buildPhases = (
+				E82B394600AB19D28D959746 /* [CP] Check Pods Manifest.lock */,
+				8907458E2CA3E77A00419221 /* Sources */,
+				8907458F2CA3E77A00419221 /* Frameworks */,
+				890745902CA3E77A00419221 /* Resources */,
+				F8EEF82221A704AB5F7EC3AF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				890745942CA3E77A00419221 /* PBXTargetDependency */,
+			);
+			name = WaterDrUITests;
+			productName = WaterDrUITests;
+			productReference = 890745922CA3E77A00419221 /* WaterDrUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8907456A2CA3E77900419221 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					890745712CA3E77900419221 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					890745872CA3E77A00419221 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 890745712CA3E77900419221;
+					};
+					890745912CA3E77A00419221 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 890745712CA3E77900419221;
+					};
+				};
+			};
+			buildConfigurationList = 8907456D2CA3E77900419221 /* Build configuration list for PBXProject "WaterDr" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 890745692CA3E77900419221;
+			productRefGroup = 890745732CA3E77900419221 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				890745712CA3E77900419221 /* WaterDr */,
+				890745872CA3E77A00419221 /* WaterDrTests */,
+				890745912CA3E77A00419221 /* WaterDrUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		890745702CA3E77900419221 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8907457F2CA3E77A00419221 /* Assets.xcassets in Resources */,
+				890745822CA3E77A00419221 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		890745862CA3E77A00419221 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		890745902CA3E77A00419221 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C5F9A31E35355F6973B787E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaterDr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3181C0F6D1EEF999A8BEEC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaterDrTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E82B394600AB19D28D959746 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaterDr-WaterDrUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF37F9FBB29CB383A71FD906 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterDr/Pods-WaterDr-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterDr/Pods-WaterDr-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterDr/Pods-WaterDr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8EEF82221A704AB5F7EC3AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterDr-WaterDrUITests/Pods-WaterDr-WaterDrUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterDr-WaterDrUITests/Pods-WaterDr-WaterDrUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterDr-WaterDrUITests/Pods-WaterDr-WaterDrUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8907456E2CA3E77900419221 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8924A9A42CA40EA000683141 /* ScreenUtils.swift in Sources */,
+				8907457A2CA3E77900419221 /* ViewController.swift in Sources */,
+				890745762CA3E77900419221 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		890745842CA3E77A00419221 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8907458D2CA3E77A00419221 /* WaterDrTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8907458E2CA3E77A00419221 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				890745992CA3E77A00419221 /* WaterDrUITestsLaunchTests.swift in Sources */,
+				890745972CA3E77A00419221 /* WaterDrUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8907458A2CA3E77A00419221 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 890745712CA3E77900419221 /* WaterDr */;
+			targetProxy = 890745892CA3E77A00419221 /* PBXContainerItemProxy */;
+		};
+		890745942CA3E77A00419221 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 890745712CA3E77900419221 /* WaterDr */;
+			targetProxy = 890745932CA3E77A00419221 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		890745802CA3E77A00419221 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				890745812CA3E77A00419221 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8907459A2CA3E77A00419221 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8907459B2CA3E77A00419221 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8907459D2CA3E77A00419221 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6052B65309B2ABE8C93D8158 /* Pods-WaterDr.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 276H2F73WL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WaterDr/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngr.WaterDr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8907459E2CA3E77A00419221 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 927F79D69CBB9B8CD3B1B304 /* Pods-WaterDr.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 276H2F73WL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WaterDr/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngr.WaterDr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		890745A02CA3E77A00419221 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F8143670C690CF9CCE8D7F5 /* Pods-WaterDrTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 276H2F73WL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngr.WaterDrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterDr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WaterDr";
+			};
+			name = Debug;
+		};
+		890745A12CA3E77A00419221 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E662A7877A1A04C075396F88 /* Pods-WaterDrTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 276H2F73WL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngr.WaterDrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterDr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WaterDr";
+			};
+			name = Release;
+		};
+		890745A32CA3E77A00419221 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FCA5870531808E148388D18 /* Pods-WaterDr-WaterDrUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 276H2F73WL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngr.WaterDrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WaterDr;
+			};
+			name = Debug;
+		};
+		890745A42CA3E77A00419221 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 012E838D138322047D22F699 /* Pods-WaterDr-WaterDrUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 276H2F73WL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngr.WaterDrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WaterDr;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8907456D2CA3E77900419221 /* Build configuration list for PBXProject "WaterDr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8907459A2CA3E77A00419221 /* Debug */,
+				8907459B2CA3E77A00419221 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8907459C2CA3E77A00419221 /* Build configuration list for PBXNativeTarget "WaterDr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8907459D2CA3E77A00419221 /* Debug */,
+				8907459E2CA3E77A00419221 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8907459F2CA3E77A00419221 /* Build configuration list for PBXNativeTarget "WaterDrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				890745A02CA3E77A00419221 /* Debug */,
+				890745A12CA3E77A00419221 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		890745A22CA3E77A00419221 /* Build configuration list for PBXNativeTarget "WaterDrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				890745A32CA3E77A00419221 /* Debug */,
+				890745A42CA3E77A00419221 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8907456A2CA3E77900419221 /* Project object */;
+}
