@@ -33,4 +33,24 @@ class ScreenUtils {
         }
         return (top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
     }
+    
+    static func size() -> (width: CGFloat, height: CGFloat) {
+        var sWidth = 0.0
+        var sHeight = 0.0
+        if #available(iOS 15.0, *) {
+            // iOS 15 and later
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let window = windowScene.keyWindow {
+                sWidth = window.screen.bounds.width
+                sHeight = window.screen.bounds.height
+            }
+        } else {
+            // iOS 14 and earlier
+            if let window = UIApplication.shared.windows.first {
+                sWidth = window.screen.bounds.width
+                sHeight = window.screen.bounds.height
+            }
+        }
+        return (width: sWidth, height: sHeight)
+    }
 }
