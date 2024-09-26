@@ -17,6 +17,8 @@
 		8924A9A42CA40EA000683141 /* ScreenUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924A9A32CA40EA000683141 /* ScreenUtils.swift */; };
 		89602EF52CA51F93006331C8 /* MainVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89602EF42CA51F93006331C8 /* MainVIewController.swift */; };
 		89602EF72CA51FDF006331C8 /* HistoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89602EF62CA51FDF006331C8 /* HistoriesViewController.swift */; };
+		89602EFA2CA53294006331C8 /* ModelHistories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89602EF92CA53294006331C8 /* ModelHistories.swift */; };
+		89602EFD2CA534BD006331C8 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89602EFC2CA534BD006331C8 /* Types.swift */; };
 		DFD996F8F12638FF835EB0BC /* Pods_WaterDr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3180131A0712772386EB352 /* Pods_WaterDr.framework */; };
 		FF5FA0FC3B1DA7C250F87384 /* Pods_WaterDrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1ED73A70E7610053F0FED0 /* Pods_WaterDrTests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		8924A9A32CA40EA000683141 /* ScreenUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenUtils.swift; sourceTree = "<group>"; };
 		89602EF42CA51F93006331C8 /* MainVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVIewController.swift; sourceTree = "<group>"; };
 		89602EF62CA51FDF006331C8 /* HistoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoriesViewController.swift; sourceTree = "<group>"; };
+		89602EF92CA53294006331C8 /* ModelHistories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHistories.swift; sourceTree = "<group>"; };
+		89602EFC2CA534BD006331C8 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		927F79D69CBB9B8CD3B1B304 /* Pods-WaterDr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDr.release.xcconfig"; path = "Target Support Files/Pods-WaterDr/Pods-WaterDr.release.xcconfig"; sourceTree = "<group>"; };
 		D3180131A0712772386EB352 /* Pods_WaterDr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterDr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1ED73A70E7610053F0FED0 /* Pods_WaterDrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterDrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +143,8 @@
 		890745742CA3E77900419221 /* WaterDr */ = {
 			isa = PBXGroup;
 			children = (
+				89602EFB2CA534AF006331C8 /* Types */,
+				89602EF82CA5327F006331C8 /* Models */,
 				89602EF02CA51F5C006331C8 /* Routes */,
 				89602EEF2CA51F55006331C8 /* Screens */,
 				8924A9A22CA40E8F00683141 /* Utils */,
@@ -178,6 +184,9 @@
 		89602EEF2CA51F55006331C8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				89602EF32CA51F76006331C8 /* Settings */,
+				89602EF22CA51F71006331C8 /* Histories */,
+				89602EF12CA51F6B006331C8 /* Main */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -185,9 +194,6 @@
 		89602EF02CA51F5C006331C8 /* Routes */ = {
 			isa = PBXGroup;
 			children = (
-				89602EF32CA51F76006331C8 /* Settings */,
-				89602EF22CA51F71006331C8 /* Histories */,
-				89602EF12CA51F6B006331C8 /* Main */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -213,6 +219,22 @@
 			children = (
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		89602EF82CA5327F006331C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				89602EF92CA53294006331C8 /* ModelHistories.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		89602EFB2CA534AF006331C8 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				89602EFC2CA534BD006331C8 /* Types.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +477,8 @@
 			files = (
 				8924A9A42CA40EA000683141 /* ScreenUtils.swift in Sources */,
 				89602EF72CA51FDF006331C8 /* HistoriesViewController.swift in Sources */,
+				89602EFA2CA53294006331C8 /* ModelHistories.swift in Sources */,
+				89602EFD2CA534BD006331C8 /* Types.swift in Sources */,
 				890745762CA3E77900419221 /* AppDelegate.swift in Sources */,
 				89602EF52CA51F93006331C8 /* MainVIewController.swift in Sources */,
 			);

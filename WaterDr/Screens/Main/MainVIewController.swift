@@ -83,6 +83,11 @@ class MainViewController: UIViewController {
         setupLayout()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showModalHistories()
+    }
+    
     private func setupLayout() {
         self.view.addSubview(svInfoBar)
         svInfoBar.snp.makeConstraints { (make) -> Void in
@@ -118,4 +123,80 @@ class MainViewController: UIViewController {
     private func setupBase() {
         self.view.backgroundColor = UIColor.blueLight
     }
+    
+    private func showModalHistories() {
+        let histories: UIViewController = HistoriesViewController()
+        histories.modalPresentationStyle = .custom
+        histories.isModalInPresentation = true
+        histories.transitioningDelegate = self
+        present(histories, animated: true)
+    }
 }
+
+// Extend MainViewController for transitioning delegate
+extension MainViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController,
+                                presenting: UIViewController?,
+                                source: UIViewController) -> UIPresentationController? {
+        return CustomPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}
+
+class CustomPresentationController: UIPresentationController {
+    private var panGestureRecognizer: UIPanGestureRecognizer!
+
+    override func presentationTransitionDidEnd(_ completed: Bool) {
+        super.presentationTransitionDidEnd(completed)
+        
+        // Add the pan gesture recognizer to the presented view
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
+        presentedView?.addGestureRecognizer(panGestureRecognizer)
+    }
+
+    override func dismissalTransitionWillBegin() {
+        super.dismissalTransitionWillBegin()
+        
+        // Remove the pan gesture recognizer
+        if let gesture = panGestureRecognizer {
+            presentedView?.removeGestureRecognizer(gesture)
+        }
+    }
+
+    override var frameOfPresentedViewInContainerView: CGRect {
+        let height = ScreenUtils.size().height * 0.4
+        return CGRect(x: 0,
+                      y: ScreenUtils.size().height - height,
+                      width: ScreenUtils.size().width,
+                      height: ScreenUtils.size().height)
+    }
+
+    @objc private func handlePan(_ gesture: UIPanGestureRecognizer) {
+        guard let presentedView = presentedView else { return }
+
+        let translation = gesture.translation(in: presentedView.superview)
+
+        switch gesture.state {
+        case .changed:
+            // Move the presented view based on the drag
+            let newY = presentedView.frame.origin.y + translation.y
+            // Update the presented view's position
+            presentedView.frame.origin.y = newY
+            // Reset the translation to zero after applying
+            gesture.setTranslation(.zero, in: presentedView.superview)
+        case .ended:
+            // Animate back to the original position
+            UIView.animate(withDuration: 0.8,
+                           delay: 0,
+                           usingSpringWithDamping: 0.5, // Use spring damping for the bounce effect
+                           initialSpringVelocity: 0.5, // Set an initial velocity for the bounce
+                           options: [],
+                           animations: {
+                               presentedView.frame.origin.y = self.frameOfPresentedViewInContainerView.origin.y
+                           }, completion: nil)
+
+        default:
+            break
+        }
+    }
+}
+

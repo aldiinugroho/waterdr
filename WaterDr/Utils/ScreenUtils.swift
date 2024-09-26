@@ -53,4 +53,11 @@ class ScreenUtils {
         }
         return (width: sWidth, height: sHeight)
     }
+    
+    static func roundedCorner(corner: UIRectCorner, view: UIView, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: corner, cornerRadii: CGSize(width: radius, height: radius))
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        view.layer.mask = maskLayer
+    }
 }
