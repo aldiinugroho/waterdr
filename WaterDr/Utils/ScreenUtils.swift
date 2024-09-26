@@ -8,21 +8,29 @@
 import UIKit
 
 class ScreenUtils {
-    static func topInset() -> CGFloat {
+    static func inset() -> (top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) {
+        var topInset = 0.0
+        var bottomInset = 0.0
+        var leftInset = 0.0
+        var rightInset = 0.0
         if #available(iOS 15.0, *) {
             // iOS 15 and later
             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                let window = windowScene.keyWindow {
-                let topSafeAreaHeight = window.safeAreaInsets.top
-                return topSafeAreaHeight
+                topInset = window.safeAreaInsets.top
+                bottomInset = window.safeAreaInsets.bottom
+                rightInset = window.safeAreaInsets.right
+                leftInset = window.safeAreaInsets.left
             }
         } else {
             // iOS 14 and earlier
             if let window = UIApplication.shared.windows.first {
-                let topSafeAreaHeight = window.safeAreaInsets.top
-                return topSafeAreaHeight
+                topInset = window.safeAreaInsets.top
+                bottomInset = window.safeAreaInsets.bottom
+                rightInset = window.safeAreaInsets.right
+                leftInset = window.safeAreaInsets.left
             }
         }
-        return 0.0
+        return (top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
     }
 }

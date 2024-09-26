@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     private func setupLayout() {
         self.view.addSubview(svTargetnProg)
         svTargetnProg.snp.makeConstraints { (make) -> Void in
-            make.top.equalToSuperview().inset(ScreenUtils.topInset())
+            make.top.equalToSuperview().inset(ScreenUtils.inset().top)
             make.width.equalToSuperview()
         }
         
