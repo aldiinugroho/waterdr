@@ -174,11 +174,12 @@ class CustomPresentationController: UIPresentationController {
         guard let presentedView = presentedView else { return }
 
         let translation = gesture.translation(in: presentedView.superview)
-
+        // Move the presented view based on the drag
+        let newY = presentedView.frame.origin.y + translation.y
+        let origin = self.frameOfPresentedViewInContainerView.origin.y
+        let maxScreenHeight = ScreenUtils.size().height / 4
         switch gesture.state {
         case .changed:
-            // Move the presented view based on the drag
-            let newY = presentedView.frame.origin.y + translation.y
             // Update the presented view's position
             presentedView.frame.origin.y = newY
             // Reset the translation to zero after applying
@@ -191,9 +192,8 @@ class CustomPresentationController: UIPresentationController {
                            initialSpringVelocity: 0.5, // Set an initial velocity for the bounce
                            options: [],
                            animations: {
-                               presentedView.frame.origin.y = self.frameOfPresentedViewInContainerView.origin.y
+                presentedView.frame.origin.y = origin < newY ? origin : (newY < maxScreenHeight ? maxScreenHeight : newY)
                            }, completion: nil)
-
         default:
             break
         }
