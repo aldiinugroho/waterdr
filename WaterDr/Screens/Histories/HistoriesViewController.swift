@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class HistoriesViewController: UIViewController {
+    var data: [String] = ["sample1","sample2"]
     
     lazy var usvMain: UIStackView = {
         let ctx = UIStackView()
@@ -25,6 +26,12 @@ class HistoriesViewController: UIViewController {
     }()
     
     let stackCard: HistoriesCardChild = HistoriesCardChild()
+    
+    lazy var utvCardHistories: UITableView = {
+        let ctx = UITableView()
+        ctx.separatorStyle = UITableViewCell.SeparatorStyle.none
+        return ctx
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +51,23 @@ class HistoriesViewController: UIViewController {
             make.width.equalTo(ScreenUtils.size().width * 0.35)
             make.height.equalTo(5)
         }
-        self.usvMain.addArrangedSubview(stackCard)
-        self.stackCard.snp.makeConstraints {(make) -> Void in
+        registerUtvCardHistories()
+    }
+    
+    private func registerUtvCardHistories() {
+        self.usvMain.addArrangedSubview(utvCardHistories)
+        self.utvCardHistories.snp.makeConstraints {(make) -> Void in
             make.width.equalToSuperview()
+            make.height.equalTo(ScreenUtils.size().height * 0.65)
         }
+        utvCardHistories.rowHeight = UITableView.automaticDimension
+        utvCardHistories.register(HistoriesCardChildCell.self, forCellReuseIdentifier: HistoriesCardChildCell.reuseableId)
+        utvCardHistories.delegate = self
+        utvCardHistories.dataSource = self
+    }
+    
+    func updateTableSize(size: CGFloat) {
+        print(size)
     }
     
     private func setupbase() {
@@ -60,72 +80,42 @@ class HistoriesViewController: UIViewController {
     }
 }
 
-class HistoriesCardChild: UIStackView {
-    
-    private var data: ModelHistories = ModelHistories(typeOfDrink: TypeOfDrink.water, createdAt: Date.now, amount: 0)
-    
-    lazy var ulTime: UILabel = {
-        let ctx = UILabel()
-        ctx.text = "00:00"
-        return ctx
-    }()
-    
-    lazy var ulType: UILabel = {
-        let ctx = UILabel()
-        ctx.text = "Water"
-        ctx.textAlignment = .center
-        return ctx
-    }()
-    
-    lazy var ulAmount: UILabel = {
-        let ctx = UILabel()
-        ctx.text = "0 ML"
-        return ctx
-    }()
-    
-    lazy var uiiWaterDrop: UIImageView = {
-        let ctx = UIImageView(image: UIImage(named: "icWaterDrop"))
-        return ctx
-    }()
-    
-    lazy var usvDesc: UIStackView = {
-        let ctx = UIStackView()
-        ctx.axis = .vertical
-        return ctx
-    }()
-    
-    lazy var usvDescDetail: UIStackView = {
-        let ctx = UIStackView()
-        ctx.axis = .horizontal
-        return ctx
-    }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setuplayout()
+extension HistoriesViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
     }
     
-    private func setuplayout() {
-        self.addArrangedSubview(self.ulTime)
-        self.addArrangedSubview(self.usvDesc)
-        self.addArrangedSubview(self.usvDescDetail)
-        self.usvDesc.addArrangedSubview(self.ulType)
-        self.usvDesc.addArrangedSubview(self.usvDescDetail)
-        self.usvDescDetail.addArrangedSubview(self.ulAmount)
-        self.usvDescDetail.addArrangedSubview(self.uiiWaterDrop)
-        self.uiiWaterDrop.snp.makeConstraints {(make) -> Void in
-            make.width.height.equalTo(ScreenUtils.size().width * 0.075)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: HistoriesCardChildCell = tableView.dequeueReusableCell(withIdentifier: HistoriesCardChildCell.reuseableId, for: indexPath) as! HistoriesCardChildCell
+        cell.selectionStyle = .none
+        if indexPath.row == data.count - 1 {
+            cell.setupCell(separate: false)
+        } else {
+            cell.setupCell(separate: true)
         }
-        setupData(data: data)
+        return cell
+    }
+}
+
+class HistoriesCardChildCell: UITableViewCell {
+    static let reuseableId: String = "HistoriesCardChildCell"
+    
+    let childComponent: HistoriesCardChild = HistoriesCardChild()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.addSubview(childComponent)        
+        childComponent.snp.makeConstraints { make in
+            make.top.leading.trailing.bottom.equalToSuperview()
+        }
     }
     
-    private func setupData(data: ModelHistories) {
-        self.ulTime.setStyle(label: DateUtils.dateToString(value: data.createdAt ?? Date.now), fontSize: 14, fontWeight: .bold)
-        self.ulType.setStyle(label: data.typeOfDrink?.rawValue ?? "", fontSize: 14, fontWeight: .bold)
-        self.ulAmount.setStyle(label: "\(data.amount ?? 0) ML", fontSize: 14, fontWeight: .bold)
+    func setupCell(separate: Bool) {
+        let data: ModelHistories = ModelHistories(typeOfDrink: TypeOfDrink.water, createdAt: Date.now, amount: 0)
+        childComponent.setupData(data: data, separate: separate)
     }
     
-    required init(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

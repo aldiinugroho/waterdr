@@ -10,6 +10,8 @@ import SnapKit
 
 class MainViewController: UIViewController {
     
+    let histories: UIViewController = HistoriesViewController()
+    
     private let centerAlignt: NSParagraphStyle = {
         let style = NSMutableParagraphStyle()
         style.alignment = .center
@@ -125,7 +127,6 @@ class MainViewController: UIViewController {
     }
     
     private func showModalHistories() {
-        let histories: UIViewController = HistoriesViewController()
         histories.modalPresentationStyle = .custom
         histories.isModalInPresentation = true
         histories.transitioningDelegate = self
