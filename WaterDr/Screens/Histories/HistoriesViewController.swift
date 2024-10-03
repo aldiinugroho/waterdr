@@ -9,7 +9,13 @@ import Foundation
 import UIKit
 
 class HistoriesViewController: UIViewController {
-    var data: [String] = ["sample1","sample2"]
+    var data: [ModelHistories] = [
+        ModelHistories(typeOfDrink: .tea, createdAt: Date.now, amount: 100),
+        ModelHistories(typeOfDrink: .water, createdAt: Date.now, amount: 100),
+        ModelHistories(typeOfDrink: .water, createdAt: Date.now, amount: 250),
+        ModelHistories(typeOfDrink: .any, createdAt: Date.now, amount: 100),
+        ModelHistories(typeOfDrink: .any, createdAt: Date.now, amount: 250)
+    ]
     
     lazy var usvMain: UIStackView = {
         let ctx = UIStackView()
@@ -89,9 +95,9 @@ extension HistoriesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell: HistoriesCardChildCell = tableView.dequeueReusableCell(withIdentifier: HistoriesCardChildCell.reuseableId, for: indexPath) as! HistoriesCardChildCell
         cell.selectionStyle = .none
         if indexPath.row == data.count - 1 {
-            cell.setupCell(separate: false)
+            cell.setupCell(separate: false, data: data[indexPath.row])
         } else {
-            cell.setupCell(separate: true)
+            cell.setupCell(separate: true, data: data[indexPath.row])
         }
         return cell
     }
@@ -110,8 +116,7 @@ class HistoriesCardChildCell: UITableViewCell {
         }
     }
     
-    func setupCell(separate: Bool) {
-        let data: ModelHistories = ModelHistories(typeOfDrink: TypeOfDrink.water, createdAt: Date.now, amount: 0)
+    func setupCell(separate: Bool, data: ModelHistories) {
         childComponent.setupData(data: data, separate: separate)
     }
     
