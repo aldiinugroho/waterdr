@@ -11,7 +11,7 @@ import UIKit
 
 class HistoriesCardChild: UIStackView {
     
-    private var data: ModelHistories = ModelHistories(typeOfDrink: TypeOfDrink.water, createdAt: Date.now, amount: 0)
+    private var data: ModelHistories = ModelHistories(typeOfDrink: SeedTypeOfDrink.first, createdAt: Date.now, amount: 0)
     
     lazy var usvMain: UIStackView = {
         let ctx = UIStackView()
@@ -83,8 +83,9 @@ class HistoriesCardChild: UIStackView {
     
     func setupData(data: ModelHistories, separate: Bool) {
         self.ulTime.setStyle(label: DateUtils.dateToString(value: data.createdAt ?? Date.now), fontSize: 14, fontWeight: .bold)
-        self.ulType.setStyle(label: data.typeOfDrink?.rawValue ?? "", fontSize: 14, fontWeight: .bold)
+        self.ulType.setStyle(label: data.typeOfDrink?.name ?? "", fontSize: 14, fontWeight: .bold)
         self.ulAmount.setStyle(label: "\(data.amount ?? 0) ML", fontSize: 14, fontWeight: .bold)
+        self.uiiWaterDrop.image = data.typeOfDrink?.image
         if separate {
             setSeparator()
         }

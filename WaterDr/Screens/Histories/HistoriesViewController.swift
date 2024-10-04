@@ -9,13 +9,7 @@ import Foundation
 import UIKit
 
 class HistoriesViewController: UIViewController {
-    var data: [ModelHistories] = [
-        ModelHistories(typeOfDrink: .tea, createdAt: Date.now, amount: 100),
-        ModelHistories(typeOfDrink: .water, createdAt: Date.now, amount: 100),
-        ModelHistories(typeOfDrink: .water, createdAt: Date.now, amount: 250),
-        ModelHistories(typeOfDrink: .any, createdAt: Date.now, amount: 100),
-        ModelHistories(typeOfDrink: .any, createdAt: Date.now, amount: 250)
-    ]
+    var data: [ModelHistories] = SeedHistories
     
     lazy var usvMain: UIStackView = {
         let ctx = UIStackView()
