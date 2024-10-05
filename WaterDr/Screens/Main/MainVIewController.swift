@@ -153,6 +153,14 @@ class CustomPresentationController: UIPresentationController {
         panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
         presentedView?.addGestureRecognizer(panGestureRecognizer)
     }
+    
+    // Create the button view as you did before
+    private func createButtonView() -> UIView {
+        let button = UIView()
+        button.backgroundColor = .orange
+        button.layer.cornerRadius = 25
+        return button
+    }
 
     override func dismissalTransitionWillBegin() {
         super.dismissalTransitionWillBegin()
