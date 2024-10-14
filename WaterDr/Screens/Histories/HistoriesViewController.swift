@@ -58,13 +58,6 @@ class HistoriesViewController: UIViewController {
             make.height.equalTo(5)
         }
         registerUtvCardHistories()
-        self.view.addSubview(self.uvBtnToAdd)
-        self.uvBtnToAdd.snp.makeConstraints {(make) -> Void in
-            make.width.height.equalTo(50)
-            make.right.equalToSuperview().inset(80)
-            make.top.equalToSuperview().inset(-25)
-        }
-        self.uvBtnToAdd.layer.zPosition = 10
     }
     
     private func registerUtvCardHistories() {
