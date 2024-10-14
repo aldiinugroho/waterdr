@@ -25,6 +25,12 @@ class HistoriesViewController: UIViewController {
         return ctx
     }()
     
+    lazy var uvBtnToAdd: UIView = {
+        let ctx = UIView()
+        ctx.backgroundColor = .orange
+        return ctx
+    }()
+    
     let stackCard: HistoriesCardChild = HistoriesCardChild()
     
     lazy var utvCardHistories: UITableView = {
@@ -40,22 +46,29 @@ class HistoriesViewController: UIViewController {
     }
     
     private func setuplayout() {
-        self.view.addSubview(usvMain)
+        self.view.addSubview(self.usvMain)
         self.usvMain.snp.makeConstraints {(make) -> Void in
             make.top.equalToSuperview().inset(10)
             make.left.right.equalToSuperview().inset(10)
         }
         self.usvMain.spacing = 10
-        self.usvMain.addArrangedSubview(uvHolderDrag)
+        self.usvMain.addArrangedSubview(self.uvHolderDrag)
         self.uvHolderDrag.snp.makeConstraints {(make) -> Void in
             make.width.equalTo(ScreenUtils.size().width * 0.35)
             make.height.equalTo(5)
         }
         registerUtvCardHistories()
+        self.view.addSubview(self.uvBtnToAdd)
+        self.uvBtnToAdd.snp.makeConstraints {(make) -> Void in
+            make.width.height.equalTo(50)
+            make.right.equalToSuperview().inset(80)
+            make.top.equalToSuperview().inset(-25)
+        }
+        self.uvBtnToAdd.layer.zPosition = 10
     }
     
     private func registerUtvCardHistories() {
-        self.usvMain.addArrangedSubview(utvCardHistories)
+        self.usvMain.addArrangedSubview(self.utvCardHistories)
         self.utvCardHistories.snp.makeConstraints {(make) -> Void in
             make.width.equalToSuperview()
             make.height.equalTo(ScreenUtils.size().height * 0.65)
@@ -66,12 +79,9 @@ class HistoriesViewController: UIViewController {
         utvCardHistories.dataSource = self
     }
     
-    func updateTableSize(size: CGFloat) {
-        print(size)
-    }
-    
     private func setupbase() {
         self.view.backgroundColor = .white
+        self.view.clipsToBounds = false
         roundTopCorners()
     }
     
